@@ -36,6 +36,15 @@ public class ThreadUtil {
             ByLog.err("waits error control = NULL");
         }
     }
+    public static void wait(int time,Object control){
+        synchronized (control) {
+            try {
+                control.wait(time);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public static Thread CreatThread(Runnable runnable){
         Thread thread = new Thread(runnable);
         return thread;
