@@ -25,6 +25,9 @@ public class CodeUtil {
         return cub;
     }
 
+    public static void setCodeStr(String codeStr){
+        getCUB().setCode(codeStr);
+    }
     public static byte[] getCode(int code) {
         return getCUB().getCode(code);
     }

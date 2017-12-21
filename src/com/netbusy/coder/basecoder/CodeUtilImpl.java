@@ -13,7 +13,7 @@ import com.netbusy.util.datautil.DTC;
  */
 public class CodeUtilImpl implements CodeUtilI {
 
-    private static byte[] codes = DTC.stringToBytes("kv(d98<!");
+    private  byte[] codes = DTC.stringToBytes("kv(d98<!");
 
     @Override
     public byte[] getCode(int code) {
@@ -33,5 +33,10 @@ public class CodeUtilImpl implements CodeUtilI {
             code[i] = (byte) (Math.random() * len);
         }
         return DTC.byteArrayToInt(code);
+    }
+
+    @Override
+    public void setCode(String codestr) {
+        codes = DTC.stringToBytes(codestr);
     }
 }

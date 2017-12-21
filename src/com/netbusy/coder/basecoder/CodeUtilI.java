@@ -12,4 +12,5 @@ package com.netbusy.coder.basecoder;
 public interface CodeUtilI {
     byte[] getCode(int code);
     int grCode();
+    void setCode(String codestr);
 }
